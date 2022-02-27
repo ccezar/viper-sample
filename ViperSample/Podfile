@@ -1,0 +1,18 @@
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '11.0'
+inhibit_all_warnings!
+use_frameworks!
+
+workspace 'ViperSample'
+
+target 'ViperSample' do
+
+  # Third Party Pods
+
+  target 'ViperSampleTests' do
+    pod 'SnapshotTesting', '1.9.0'
+    pod 'TestUtils', :path => '../TestUtils'
+  end
+
+end

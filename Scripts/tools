@@ -1,0 +1,83 @@
+#!/bin/bash
+
+# Variables & Functions
+#===============================================================================
+header="" # Print header title
+
+print_header() {
+  echo .
+  echo =====================
+  printf "$header\n"
+  echo =====================
+  echo .
+}
+
+setup_cocoapods() {
+  header="Setup Cocoapods"; print_header;
+  if gem list cocoapods | grep -q '1.10.0'; then
+  	echo "Cocoapods already installed."
+  else
+  	echo "Cocoapods not found. Starting installation..."
+  	sudo gem install cocoapods -v 1.10.0
+  	echo "Cocoapods installed. Version:"; pod --version
+  fi
+}
+
+setup_homebrew() {
+  header="Setup Homebrew"; print_header;
+  which -s brew
+  if [[ $? != 0 ]] ; then
+  	echo "Homebrew not found. Starting installation..."
+  	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  	echo "HomeBrew installed. Version:"; brew -v
+  else
+  	brew update
+  	echo "HomeBrew updated. Version:"; brew -v
+  fi
+}
+
+setup_xcodegen() {
+  header="Setup Xcodegen"; print_header;
+  xcodegen --version
+  if [[ $? != 0 ]] ; then
+  	echo "Xcodegen not found. Starting installation..."
+  	brew install xcodegen
+  	echo "Xcodegen installed. Version:"; xcodegen --version
+  else
+  	brew upgrade xcodegen
+  	echo "Xcodegen updated. Version:"; xcodegen --version
+  fi
+}
+
+setup_bundler() {
+  header="Setup Bundler"; print_header;
+  cd ../Resources/Assets
+  gem install bundler
+  bundle update --bundler
+  bundle install
+}
+
+setup_rake() {
+  header="Setup Rake"; print_header;
+  rake --version
+  if [[ $? != 0 ]] ; then
+  	echo "Rake not found. Starting installation..."
+  	gem install rake
+  	echo "Rake installed. Version:"; rake --version
+  else
+  	gem update rake
+  	echo "Rake updated. Version:"; xcodegen --version
+  fi
+}
+
+#===============================================================================
+
+
+# main()
+#===============================================================================
+header="Starting tools setup"; print_header
+setup_rake
+setup_cocoapods
+setup_homebrew
+setup_xcodegen
+setup_bundler
