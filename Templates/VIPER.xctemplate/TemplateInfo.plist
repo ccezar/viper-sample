@@ -5,7 +5,7 @@
 	<key>DefaultCompletionName</key>
 	<string>Module</string>
 	<key>Description</key>
-	<string>Module using XPInc pattern with VIPER, composed by View, Presenter, Interactor, Router, Configurator and Protocols.</string>
+	<string>Module using VIPER, composed by View, Presenter, Interactor, Router, Configurator and Protocols.</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>Options</key>
@@ -120,6 +120,6 @@
 	<key>SortOrder</key>
 	<string>9</string>
 	<key>Summary</key>
-	<string>Module using XPInc pattern with VIPER, composed by ViewController, Presenter, Interactor, Router, Configurator and Protocols.</string>
+	<string>Module using VIPER, composed by ViewController, Presenter, Interactor, Router, Configurator and Protocols.</string>
 </dict>
 </plist>

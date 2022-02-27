@@ -1,4 +1,3 @@
-import NetworkCore
 
 final class ___VARIABLE_moduleName___Interactor {
     
@@ -8,11 +7,11 @@ final class ___VARIABLE_moduleName___Interactor {
 
     // MARK: - Private Properties
     
-    private let network: NetworkRequestable
+    private let network: NetworkObjectProtocol
 
     // MARK: - Inits
     
-    init(network: NetworkRequestable) {
+    init(network: NetworkObjectProtocol) {
         self.network = network
     }
 

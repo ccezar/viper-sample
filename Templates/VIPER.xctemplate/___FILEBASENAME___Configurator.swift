@@ -1,4 +1,3 @@
-import NetworkCore
 import UIKit
 
 public final class ___VARIABLE_moduleName___Configurator {
