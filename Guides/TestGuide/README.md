@@ -14,7 +14,7 @@
 
 ## Introdução
 
-A prática de automatizar testes é muito importante para softwares, mas é ainda mais importante para a XP por conta da nossa escala. É inaceitável deixar para o cliente final testar nossas features em produção, então devemos garantir que tudo está funcionando como esperado antes de mergear a feature na **main**.
+A prática de automatizar testes é muito importante para softwares. É inaceitável deixar para o cliente final testar nossas features em produção, então devemos garantir que tudo está funcionando como esperado antes de mergear a feature na **main**.
 
 Este é o guideline que devemos seguir ao desenvolver algo nesse repositório:
 
