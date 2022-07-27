@@ -1,4 +1,3 @@
-import SomaiOS
 import UIKit
 
 final class ___VARIABLE_moduleName___ViewController: UIViewController {
